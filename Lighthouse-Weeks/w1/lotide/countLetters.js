@@ -1,33 +1,28 @@
 const assertEqual = function(actual, expected) {
-    if (actual === expected) {
-      console.log(`These two arguemnts are the same: ${actual} vs ${expected}`);
-    } else {
-      console.log(`These two arguemnts are NOT the same: ${actual} vs ${expected}`);
-    }
+  if (actual === expected) {
+    console.log(`These two arguemnts are the same: ${actual} vs ${expected}`);
+  } else {
+    console.log(`These two arguemnts are NOT the same: ${actual} vs ${expected}`);
+  }
 
-}
+};
 
 
 
-const countLetters = function(phrase)
-{
+const countLetters = function(phrase) {
   
   
   const countStats = {};
-  for(var letter of phrase.split(''))
-  {
+  for (let letter of phrase.split('')) {
     
-      countStats[letter] = 0;
+    countStats[letter] = 0;
     
   }
 
-  for(var a in countStats)
-  {
+  for (let a in countStats) {
     
-    for(var b of phrase.split(''))
-    {
-      if(a === b)
-      {
+    for (let b of phrase.split('')) {
+      if (a === b) {
         countStats[a] ++;
       }
     }
@@ -36,11 +31,11 @@ const countLetters = function(phrase)
 
 
 
-return countStats;
+  return countStats;
 
 
 
 
 
-}
+};
 console.log(countLetters("abcdefghijklmnopqrstuvwxyzabcde"));
