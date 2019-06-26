@@ -20,3 +20,5 @@ const findWaldo = function(names, found) {
   findWaldo(["Alice", "Bob", "Waldo", "Winston"], function(index) {
     console.log(`Found him at index ${index}`);
   });
+
+  console.log(() => {console.log})

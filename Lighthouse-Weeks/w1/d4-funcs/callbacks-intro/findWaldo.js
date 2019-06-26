@@ -1,7 +1,7 @@
 const findWaldo = function(names, found) {
-  names.forEach(function(names, index) {
+  names.forEach((name, index) =>{
 
-    if (names === "Waldo") {
+    if (name === "Waldo") {
       found(index);   // execute callback
     }
     
