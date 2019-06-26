@@ -20,7 +20,60 @@ const library = {
     name: "Other Playlist",
     tracks: ["t03"]
   }
-  }
+  },
+  printPlaylists: function() {
+    //console.log(library["playlists"]);
+    for (let object in library["playlists"]) {
+      console.log(`${object}: ${library["playlists"][object]["name"]} - ${library["playlists"][object]["tracks"].length} tracks`);
+    }
+  },
+  printTracks: function() {
+    for (let object in library["tracks"]) {
+      console.log(`${object}: ${library["tracks"][object]["name"]} - (${library["tracks"][object]["album"]})`);
+    }
+  },
+  printPlaylist: function(playlistId) {
+       
+    console.log(`${playlistId} - ${library["playlists"][playlistId]["tracks"].length} tracks`);
+    for (let object in library["tracks"]) {
+      console.log(`${object}: ${library['tracks'][object]["name"]} by ${library['tracks'][object]["artist"]}`);
+    }
+  },
+  addTrackToPlaylist: function(trackId, playlistId) {
+    library["playlists"][playlistId]["tracks"].push(trackId);
+  },
+  generateUid: function() {
+    return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+  },
+  addTrack: function(name, artist, album) {
+    let ide = `t${generateUid()}`;
+    library["tracks"][ide] = {
+      "id": ide,
+      "name": name,
+      "artist": artist,
+      "album": album
+    };
+  
+  },
+  addPlaylist = function(name) {
+    let pName = `p${generateUid()}`;
+    library["playlists"][pName] =
+         {
+           "id": pName,
+           "name": name,
+           "tracks": []
+  
+         };
+         
+  
+  
+  },
+  
+
+
+
+  
+
 };
 
 /////////////////////////////
