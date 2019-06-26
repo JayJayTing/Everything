@@ -18,3 +18,6 @@ const hi = {
 }
 
 console.log(hi);
+
+var array1 = [1, 2,3, 4, 5, 6];
+
